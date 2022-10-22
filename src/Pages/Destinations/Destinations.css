@@ -1,0 +1,17 @@
+.destination-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.37)), url("../../Assets/location/destination.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.destination-info {
+    position: relative;
+}
+
+.destination-info h5 {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    color: whitesmoke;
+}

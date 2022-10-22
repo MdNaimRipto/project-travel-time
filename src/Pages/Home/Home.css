@@ -1,0 +1,6 @@
+.bg-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.37)), url("../../Assets/location/cox\'s-bazar.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
