@@ -1,0 +1,27 @@
+.secondary-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.37)), url("../Assets//location/sreemangal.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 150vh;
+}
+
+.horizontal-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.horizontal-line:before,
+.horizontal-line:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid gray;
+    margin: auto;
+}
+
+.horizontal-line:before {
+    margin-right: 10px
+}
+
+.horizontal-line:after {
+    margin-left: 10px
+}

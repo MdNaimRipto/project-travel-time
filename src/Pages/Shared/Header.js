@@ -50,7 +50,7 @@ const Header = () => {
                                 </Link>
                             </p>
                         </NavDropdown>
-                        <Link className='text-decoration-none'><Button className='px-4 py-2' variant="warning">Login</Button></Link>
+                        <Link to="/login" className='text-decoration-none'><Button className='px-4 py-2' variant="warning">Login</Button></Link>
                     </Nav>
                     <Form className="d-flex d-lg-none">
                         <Form.Control
