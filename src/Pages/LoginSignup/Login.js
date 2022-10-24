@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import fbIcon from "../../Assets/icons/fb.png"
 import googleIcon from "../../Assets/icons/google.png"
+import { UserContext } from '../../ContextProvider/UserProvider';
 
 const Login = () => {
+    const { signInWithFaceBook } = useContext(UserContext);
+
+    const handleFacebookSignIn = () => {
+        signInWithFaceBook()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
     return (
-        <div class="d-flex align-items-center justify-content-center"
+        <div className="d-flex align-items-center justify-content-center"
             style={{ width: "30%", margin: "auto" }}>
             <div className="fw-semibold">
                 <Form className="w-100 mx-auto border border-secondary pt-5 pb-5 mt-5 px-3 rounded bg-white">
@@ -38,6 +49,7 @@ const Login = () => {
                         Continue With Google
                     </Button>
                     <Button
+                        onClick={handleFacebookSignIn}
                         className="w-100 my-2 fw-semibold border border-secondary rounded-5 position-relative" variant="light" type="submit">
                         <img
                             style={{ height: "30px", marginLeft: "4px", top: "3px" }} className="me-3 position-absolute start-0" src={fbIcon} alt="" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -7,8 +7,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
 import { MdOutlineLuggage } from "react-icons/md";
+import { UserContext } from '../../ContextProvider/UserProvider';
 
 const Header = () => {
+    const { user } = useContext(UserContext)
     return (
         <Navbar className="pt-4 pb-4" bg="dark" variant='dark' expand="lg">
             <Container fluid className="container">
@@ -37,8 +39,7 @@ const Header = () => {
                             className='text-decoration-none text-white'>Destination's</Link>
                         <Link to="/blog" className='text-decoration-none text-white'>Blog</Link>
                         <Link to="/contact" className='text-decoration-none text-white'>Contact</Link>
-
-                        <NavDropdown title="Link" id="navbarScrollingDropdown">
+                        <NavDropdown title={user?.name} id="navbarScrollingDropdown">
                             <p>
                                 <Link href="#action4">
                                     Your Profile

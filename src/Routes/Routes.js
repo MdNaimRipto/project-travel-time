@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import Slider from "react-slick";
 import Main from "../Layout/Main";
 import Secondary from "../Layout/Secondary";
 import AllLocations from "../Pages/AllLocations/AllLocations";
@@ -63,13 +62,6 @@ export const routes = createBrowserRouter([
                 element: <Hotels></Hotels>,
                 loader: async ({ params }) => {
                     return fetch(`http://localhost:5000/allLocation/${params.id}`)
-                }
-            },
-            {
-                path: "/slider",
-                element: <CenterMode></CenterMode>,
-                loader: async () => {
-                    return fetch("http://localhost:5000/allLocation")
                 }
             }
         ]

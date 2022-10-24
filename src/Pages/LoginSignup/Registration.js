@@ -7,7 +7,7 @@ import googleIcon from "../../Assets/icons/google.png"
 
 const Registration = () => {
     return (
-        <div class="d-flex align-items-center justify-content-center"
+        <div className="d-flex align-items-center justify-content-center"
             style={{ width: "30%", margin: "auto" }}>
             <div className="fw-semibold py-5">
                 <Form className="w-100 mx-auto border border-secondary py-4 px-4 rounded bg-white">
