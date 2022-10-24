@@ -1,12 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
+import Slider from "react-slick";
 import Main from "../Layout/Main";
 import Secondary from "../Layout/Secondary";
 import AllLocations from "../Pages/AllLocations/AllLocations";
 import Destinations from "../Pages/Destinations/Destinations";
+import Hotels from "../Pages/Destinations/Location/Hotels";
 import Location from "../Pages/Destinations/Location/Location";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/LoginSignup/Login";
 import Registration from "../Pages/LoginSignup/Registration";
+import CenterMode from "../Pages/Slider/Slider";
 
 export const routes = createBrowserRouter([
     {
@@ -53,6 +56,20 @@ export const routes = createBrowserRouter([
                 element: <Location></Location>,
                 loader: async ({ params }) => {
                     return fetch(`http://localhost:5000/allLocation/${params.id}`)
+                }
+            },
+            {
+                path: "/hotels/:id",
+                element: <Hotels></Hotels>,
+                loader: async ({ params }) => {
+                    return fetch(`http://localhost:5000/allLocation/${params.id}`)
+                }
+            },
+            {
+                path: "/slider",
+                element: <CenterMode></CenterMode>,
+                loader: async () => {
+                    return fetch("http://localhost:5000/allLocation")
                 }
             }
         ]

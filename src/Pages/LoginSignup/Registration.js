@@ -10,27 +10,28 @@ const Registration = () => {
         <div class="d-flex align-items-center justify-content-center"
             style={{ width: "30%", margin: "auto" }}>
             <div className="fw-semibold py-5">
-                <Form className="w-100 mx-auto border border-secondary py-4 px-3 rounded bg-white">
+                <Form className="w-100 mx-auto border border-secondary py-4 px-4 rounded bg-white">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>First Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Your First Name" />
+                        <Form.Control className="py-2" type="text" placeholder="Enter Your First Name" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Last Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Your last Name" />
+                        <Form.Control className="py-2" type="text" placeholder="Enter Your last Name" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter Your Email Address" />
+                        <Form.Control
+                            className="py-2" type="email" placeholder="Enter Your Email Address" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Enter Password" />
+                        <Form.Control className="py-2" type="password" placeholder="Enter Password" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control type="password" placeholder="Confirm Password" />
+                        <Form.Control className="py-2" type="password" placeholder="Confirm Password" />
                     </Form.Group>
                     <Button className="w-100 my-4 fw-semibold" variant="warning" type="submit">
                         Login
@@ -42,7 +43,7 @@ const Registration = () => {
                 <p className="horizontal-line my-4 text-white">
                     Or
                 </p>
-                <div className='bg-white py-4 px-3 rounded'>
+                <div className='bg-white py-4 px-4 rounded'>
                     <Button
                         className="w-100 my-2 fw-semibold border border-secondary rounded-5 position-relative" variant="light" type="submit">
                         <img

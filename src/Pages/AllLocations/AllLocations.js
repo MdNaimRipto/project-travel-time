@@ -5,7 +5,6 @@ import "./AllLocation.css"
 
 const AllLocations = () => {
     const allLocations = useLoaderData()
-    console.log(allLocations)
     return (
         <div className='bg-secondary'>
             <div className="display-grid container pt-5">

@@ -2,7 +2,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.37)), url("../../Assets/location/destination.jpg");
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 .destination-info {

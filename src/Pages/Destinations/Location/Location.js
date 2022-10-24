@@ -6,12 +6,11 @@ import Form from 'react-bootstrap/Form';
 
 const Location = () => {
     const location = useLoaderData()
-    console.log(location)
-    const { name, description, bgImage } = location
+    const { name, description, bgImage, id } = location
     return (
         <div>
             <Card className="bg-dark text-white border-0 rounded-0">
-                <Card.Img className='img-fluid' src={bgImage} alt="Card image" style={{ height: "90vh" }} />
+                <Card.Img className='img-fluid' src={bgImage} alt="Card image" style={{ height: "95vh" }} />
                 <Card.ImgOverlay className='text-white d-flex flex-column justify-content-center container'>
                     <div className='d-flex flex-column flex-lg-row justify-content-between align-items-center'>
                         <div className='w-lg-50 py-5 me-4'>
@@ -36,7 +35,8 @@ const Location = () => {
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label className="text-secondary fw-semibold">Destination</Form.Label>
-                                    <Form.Control className="fw-semibold" type="text" value={name} />
+                                    <Form.Control className="fw-semibold" type="text"
+                                        placeholder={name} readOnly />
                                 </Form.Group>
                                 <div className='d-flex justify-content-between mb-3'>
                                     <Form.Group className="mb-3 me-3" controlId="formBasicPassword">
@@ -50,10 +50,12 @@ const Location = () => {
                                             className="fw-semibold" type="date" placeholder="Password" />
                                     </Form.Group>
                                 </div>
-                                <Button className='w-100 fw-semibold px-3 py-2'
-                                    variant="warning" type="submit">
-                                    Start Booking
-                                </Button>
+                                <Link to={`/hotels/${id}`}>
+                                    <Button className='w-100 fw-semibold px-3 py-2'
+                                        variant="warning" type="submit">
+                                        Start Booking
+                                    </Button>
+                                </Link>
                             </Form>
                         </div>
                     </div>
